@@ -15,18 +15,6 @@ impl GodotState for Spinning {
     type Owner = MeshInstance;
     type Resource = CubeResource;
 
-    fn init(&self, owner: &Self::Owner, resource: &mut Self::Resource) {}
-
-    fn ready(&self, owner: &Self::Owner, resource: &mut Self::Resource) {}
-
-    fn input(&self, owner: &Self::Owner, resource: &mut Self::Resource, event: Ref<InputEvent>) -> Option<Box<dyn GodotStateTraits<Owner = Self::Owner, Resource = Self::Resource>>> {
-        None
-    }
-
-    fn update(&self, owner: &Self::Owner, resource: &mut Self::Resource, delta: f32) -> Option<Box<dyn GodotStateTraits<Owner = Self::Owner, Resource = Self::Resource>>> {
-        None
-    }
-
     fn physics_update(&self, owner: &Self::Owner, resource: &mut Self::Resource, delta: f32) -> Option<Box<dyn GodotStateTraits<Owner = Self::Owner, Resource = Self::Resource>>> {
         // Update the mesh materal color
         resource.time += delta;
@@ -48,6 +36,4 @@ impl GodotState for Spinning {
 
         None
     }
-
-    fn integrate_forces(&self, owner: &Self::Owner, resource: &mut Self::Resource, delta: f32) {}
 }

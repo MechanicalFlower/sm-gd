@@ -17,8 +17,6 @@ impl GodotState for Idle {
     type Owner = MeshInstance;
     type Resource = CubeResource;
 
-    fn init(&self, owner: &Self::Owner, resource: &mut Self::Resource) {}
-
     fn ready(&self, owner: &Self::Owner, resource: &mut Self::Resource) {
         resource.color(owner);
     }
@@ -33,14 +31,4 @@ impl GodotState for Idle {
         
         None
     }
-
-    fn update(&self, owner: &Self::Owner, resource: &mut Self::Resource, delta: f32) -> Option<Box<dyn GodotStateTraits<Owner = Self::Owner, Resource = Self::Resource>>> {
-        None
-    }
-
-    fn physics_update(&self, owner: &Self::Owner, resource: &mut Self::Resource, delta: f32) -> Option<Box<dyn GodotStateTraits<Owner = Self::Owner, Resource = Self::Resource>>> {
-        None
-    }
-
-    fn integrate_forces(&self, owner: &Self::Owner, resource: &mut Self::Resource, delta: f32) {}
 }
