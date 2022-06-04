@@ -1,0 +1,17 @@
+[entry]
+
+X11.64="res://target/debug/libspinning_cube.so"
+OSX.64="res://target/debug/libspinning_cube.dylib"
+Windows.64="res://target/debug/spinning_cube.dll"
+
+[dependencies]
+
+X11.64=[  ]
+OSX.64=[  ]
+
+[general]
+
+singleton=false
+load_once=true
+symbol_prefix="godot_"
+reloadable=true

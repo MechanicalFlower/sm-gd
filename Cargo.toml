@@ -1,0 +1,13 @@
+[package]
+name = "sm-gd"
+version = "0.1.0"
+authors = ["florianvazelle <ponythugflorian@gmail.com>"]
+edition = "2021"
+description = "State Machine for Godot Engine"
+rust-version = "1.56"
+license = "MIT"
+keywords = ["gamedev", "state-machine", "godot", "godot-rust"]
+categories = ["game-development"]
+
+[dependencies]
+gdnative = "0.10"
